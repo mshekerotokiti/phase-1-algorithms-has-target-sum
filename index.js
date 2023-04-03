@@ -1,10 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  //declare the function hasTargetSum
+  //iterate through the array length
 }
 
 /* 
   Write the Big O time complexity of your function here
 */
+function hasTargetSum(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    const number = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === number) return true;
+    }
+  }
+  return false;
+}
 
 /* 
   Add your pseudocode here
@@ -12,6 +23,7 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
+  This code should give a truthy or falsey value if conditions are met
 */
 
 // You can run `node index.js` to view these console logs
